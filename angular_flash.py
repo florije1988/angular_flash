@@ -10,7 +10,7 @@ app.jinja_env.variable_end_string = ']]'
 
 @app.route('/')
 def hello_world():
-    return render_template('page.html')
+    return render_template('page_next.html')
 
 
 if __name__ == '__main__':

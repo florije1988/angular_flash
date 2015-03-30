@@ -1,7 +1,19 @@
 /**
  * Created by florije on 2015/3/30.
  */
-var app = angular.module("MyApp", []);
+var app = angular.module("MyApp", ['ngRoute']);
+
+app.config(function ($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: '/static/pagination_demo.html',
+            controller: 'PaginationCtrl'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+});
+
 app.factory("Item", function () {
 
     var items = [];
